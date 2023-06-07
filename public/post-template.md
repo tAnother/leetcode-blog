@@ -2,7 +2,7 @@
 title: 
 metaTitle:
 metaDesc:
-socialImage:
+socialImage: public/leetcode-logo.jpg
 date:
 tags:
 ---
