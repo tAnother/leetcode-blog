@@ -1,4 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {output: 'export'}
+
+// deploying with GitHub Actions
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+
+let assetPrefix = ''
+let basePath = ''
+
+if (isGithubActions) {
+  const repo = "leetcode-blog"
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+}
+
+const nextConfig = {
+    output: 'export',
+    images: { unoptimized: true },
+    assetPrefix: assetPrefix,
+    basePath: basePath,
+}
 
 module.exports = nextConfig

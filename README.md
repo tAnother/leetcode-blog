@@ -1,7 +1,11 @@
 Built following this guide: https://blog.openreplay.com/creating-a-markdown-powered-nextjs-blog-in-under-an-hour/. Upgrade to using App Route.
 
-## Deploy on Vercel
+## TODO
+### Known Bugs
+[] Pic does not resize (might need some external lib)
+[] Wrong path after deployment
+[] <Link href="/"> routes to '.txt' after deployment 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### New Feature
+[] Add About Page
+[] Add sorting by tag / date

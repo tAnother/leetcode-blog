@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-function getData() {  /// seems like there's no need for async here
+async function getData() {  /// seems like there's no need for async here
   // Get all posts
   const files = fs.readdirSync('posts');
   const posts = files.map((fileName) => {
@@ -21,8 +21,8 @@ function getData() {  /// seems like there's no need for async here
 }
 
 
-export default function Home() {
-  const posts = getData();
+export default async function Home() {
+  const posts = await getData();
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
@@ -36,7 +36,7 @@ export default function Home() {
                 width={650}
                 height={340}
                 alt={frontmatter.title}
-                src={`/../${frontmatter.socialImage}`}
+                src={frontmatter.socialImage}
                 style={{objectFit: 'contain'}}  /// TODO: resize img
               />
               <h1 className='p-4'>{frontmatter.title}</h1>
