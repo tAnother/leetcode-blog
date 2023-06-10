@@ -2,31 +2,31 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it'
 
-export async function getStaticPaths() {
-    // Retrieve all slugs
-    const files = fs.readdirSync('posts');
-    const paths = files.map((filename) => ({
-        params: {
-            slug: filename.replace('.md', ''),
-        }
-    }));
+// export async function getStaticPaths() {
+//     // Retrieve all slugs
+//     const files = fs.readdirSync('posts');
+//     const paths = files.map((filename) => ({
+//         params: {
+//             slug: filename.replace('.md', ''),
+//         }
+//     }));
 
-    return {
-        paths,
-        fallback: false,
-    };
-}
+//     return {
+//         paths,
+//         fallback: false,
+//     };
+// }
 
 export async function generateStaticParams() {
-    const files = fs.readdirSync('posts');  /// Q: sync?
-    const paths = files.map((filename) => {
+    const filenames = fs.readdirSync('posts');  /// Q: sync?
+    const paths = filenames.map((filename) => {
         slug: filename.replace('.md', '')
     });
 
     return paths;
 }
 
-async function getPost(params) {
+async function getPost(params) {    // func name might be confusing. what it does is in fact separating frontmatter from main content
     const file = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(file);
     return {
