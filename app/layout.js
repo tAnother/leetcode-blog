@@ -16,9 +16,7 @@ export default function RootLayout({ children }) {
         <div className='flex flex-col min-h-screen'>
           <header className='bg-sky-100 mb-8 p-4'>
             <div className='container mx-auto flex justify-center'>
-              <Link href="/">
-                🏡
-              </Link>
+              <Link href="/"> 🏡 </Link>
               <span className='mx-auto'>Daily Coding Log</span>{' '}
             </div>
           </header>

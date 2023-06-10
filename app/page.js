@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 async function getData() {  /// seems like there's no need for async here
   // Get all posts
-  const files = fs.readdirSync('posts');
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.md', '');
-    const file = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+  const filenames = fs.readdirSync('posts');
+  const posts = filenames.map((filename) => {
+    const slug = filename.replace('.md', '');
+    const file = fs.readFileSync(`posts/${filename}`, 'utf-8');
     const { data: frontmatter } = matter(file);
     return {
       slug,
@@ -36,7 +36,7 @@ export default async function Home() {
                 width={650}
                 height={340}
                 alt={frontmatter.title}
-                src={frontmatter.socialImage}
+                src={frontmatter.socialImage} // notice the default root for src is `public/`
                 style={{objectFit: 'contain'}}  /// TODO: resize img
               />
               <h1 className='p-4'>{frontmatter.title}</h1>
