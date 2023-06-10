@@ -1,6 +1,6 @@
-Daily leetcode blog for practicing with [代码随想录](). 
+Daily leetcode blog for practicing with [代码随想录](). Made by a leetcode hater with luv ♥
 
-About the language I use:
+The languages I use:
 
 I would say I'm OK with Python, fairly familiar with C, somehow comfortable with Go (or really? idk), currently trying to learn Java.
 
