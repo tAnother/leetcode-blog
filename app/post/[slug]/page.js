@@ -2,20 +2,20 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it'
 
-// export async function getStaticPaths() {
-//     // Retrieve all slugs
-//     const files = fs.readdirSync('posts');
-//     const paths = files.map((filename) => ({
-//         params: {
-//             slug: filename.replace('.md', ''),
-//         }
-//     }));
+export async function getStaticPaths() {
+    // Retrieve all slugs
+    const files = fs.readdirSync('posts');
+    const paths = files.map((filename) => ({
+        params: {
+            slug: filename.replace('.md', ''),
+        }
+    }));
 
-//     return {
-//         paths,
-//         fallback: false,
-//     };
-// }
+    return {
+        paths,
+        fallback: false,
+    };
+}
 
 export async function generateStaticParams() {
     const filenames = fs.readdirSync('posts');  /// Q: sync?
