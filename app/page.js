@@ -36,7 +36,7 @@ export default async function Home() {
                 width={650}
                 height={340}
                 alt={frontmatter.title}
-                src={frontmatter.socialImage} // notice the default root for src is `public/`
+                src={frontmatter.socialImage} // note that the default root for src is `public/`
                 style={{objectFit: 'contain'}}  /// TODO: resize img
               />
               <h1 className='p-4'>{frontmatter.title}</h1>

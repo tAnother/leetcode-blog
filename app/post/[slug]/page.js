@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 export async function generateStaticParams() {
-    const filenames = fs.readdirSync('posts');  /// Q: sync?
+    const filenames = fs.readdirSync('posts');
     const paths = filenames.map((filename) => {
         slug: filename.replace('.md', '')
     });

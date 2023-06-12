@@ -7,7 +7,7 @@ let assetPrefix = ''
 let basePath = ''
 
 if (isGithubActions) {
-  const repo = "leetcode-blog"
+  const repo = "leetcode-blog"  /// TODO: do not hard code
   assetPrefix = `/${repo}/`
   basePath = `/${repo}`
 }
