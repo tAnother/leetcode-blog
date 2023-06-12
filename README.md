@@ -4,6 +4,8 @@ Built following this guide: https://blog.openreplay.com/creating-a-markdown-powe
 ### Known Bugs
 - [] Pic does not resize (might need some external lib)
 - [] <Link href="/"> routes to '.txt' after deployment 
+    -- this seems to be a nextjs 13.3 [issue](https://github.com/vercel/next.js/issues/48996#issuecomment-1532693355). Getting rid of 'export': true might work, but that way GitHub Action would fail...
+- [] can't get rid of getStaticPaths()
 
 ### New Feature
 - [] Add About Page
