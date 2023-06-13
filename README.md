@@ -9,7 +9,7 @@ Built following this guide: https://blog.openreplay.com/creating-a-markdown-powe
     
     Getting rid of 'export': true would do (it actually went well when deploying with Vercel), but that way GitHub Action would fail...
 
-- [ ] can't get rid of getStaticPaths()
+- [x] can't get rid of getStaticPaths()
 
 ### New Feature
 - [ ] Add About Page

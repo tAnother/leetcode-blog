@@ -4,21 +4,6 @@ import md from 'markdown-it'
 
 export const dynamicParams = false;
 
-// export async function getStaticPaths() {
-//     // Retrieve all slugs
-//     const files = fs.readdirSync('posts');
-//     const paths = files.map((filename) => ({
-//         params: {
-//             slug: filename.replace('.md', ''),
-//         }
-//     }));
-
-//     return {
-//         paths,
-//         fallback: false,
-//     };
-// }
-
 export async function generateStaticParams() {
     const filenames = fs.readdirSync('posts');
     const paths = filenames.map((filename) => ({
@@ -28,7 +13,7 @@ export async function generateStaticParams() {
     return paths;
 }
 
-async function preparePost(slug) {    // func name might be confusing. what it does is in fact separating frontmatter from main content
+async function preparePost(slug) {    // separate frontmatter from main content
     const file = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(file);
     return {

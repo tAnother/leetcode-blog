@@ -7,7 +7,7 @@ let assetPrefix = ''
 let basePath = ''
 
 if (isGithubActions) {
-  const repo = "leetcode-blog"  /// TODO: do not hard code
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '') // remove username from repo name
   assetPrefix = `/${repo}/`
   basePath = `/${repo}`
 }
