@@ -1,3 +1,5 @@
+## About this site
+
 Daily leetcode blog for practicing with [代码随想录](). Made by a leetcode hater with luv ♥
 
 The languages I use:

@@ -1,6 +1,9 @@
 Built following this guide: https://blog.openreplay.com/creating-a-markdown-powered-nextjs-blog-in-under-an-hour/. Upgrade to using App Route.
 
 ## TODO
+
+- [ ] How to enable source map?
+
 ### Known Bugs
 - [ ] Pic does not resize (might need some external lib)
 - [x] <Link href="/"> routes to '.txt' after deployment 
@@ -13,5 +16,7 @@ Built following this guide: https://blog.openreplay.com/creating-a-markdown-powe
 
 ### New Feature
 - [ ] Add About Page
+    - problem: button is client component, but 'fs' is not supported in a client component
 - [ ] Add sorting by tag / date
 - [ ] Syntax highlighting
+- [ ] Previous / Next Page

@@ -17,6 +17,7 @@ const nextConfig = {
     images: { unoptimized: true },
     assetPrefix: assetPrefix,
     basePath: basePath,
+    productionBrowserSourceMaps: true,
 }
 
 module.exports = nextConfig
