@@ -12,12 +12,6 @@ if (isGithubActions) {
   basePath = `/${repo}`
 }
 
-const nextConfig = {
-    output: 'export',
-    // images: { unoptimized: true },
-    assetPrefix: assetPrefix,
-    basePath: basePath,
-    productionBrowserSourceMaps: true,
-}
+const nextConfig = {}
 
 module.exports = nextConfig
