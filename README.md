@@ -1,4 +1,4 @@
-Built following this guide: https://blog.openreplay.com/creating-a-markdown-powered-nextjs-blog-in-under-an-hour/. Upgrade to using App Route.
+Built following this guide: https://blog.openreplay.com/creating-a-markdown-powered-nextjs-blog-in-under-an-hour/. Upgraded to App Route.
 
 ## TODO
 
